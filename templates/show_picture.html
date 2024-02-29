@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- A table to display the pixels based on the provided 'rows' and 'col' parameters. -->
+    <table>
+        {% for i in range(rows) %}
+            <!-- Loop through each row -->
+            <tr>
+                {% for j in range(col) %}
+                    <!-- Loop through each column in the row -->
+                    <!-- Each table cell (td) represents a pixel with a background color -->
+                    <td style="background-color:{{pixs[i*col + j]}}; height: 50px; width: 50px"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
